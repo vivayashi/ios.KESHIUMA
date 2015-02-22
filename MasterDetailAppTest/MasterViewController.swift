@@ -34,7 +34,7 @@ class MasterViewController: UITableViewController {
             "オークス",
             "日本ダービー",
             "安田記念",
-            "宝塚記念aa",
+            "宝塚記念",
             "スプリンターズS",
             "秋華賞",
             "天皇賞(秋)",

@@ -21,7 +21,7 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         // タイトルをつける
-        self.title = "Grade Ⅰ"
+        self.title = "GradeⅠ"
         // 表示データを配列で用意する
         objects = ["フェブラリーS",
             "高松宮記念",
@@ -72,9 +72,11 @@ class MasterViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             // 配列の選択した行を調べてその値を受け渡す
             if let indexPath = self.tableView.indexPathForSelectedRow() {
+                println(indexPath.row); // テーブルの行が返る
                 let object = objects[indexPath.row] as String
                 let controller = segue.destinationViewController as DetailViewController
                 controller.detailItem = object
+                
             }
         }
     }
@@ -94,6 +96,7 @@ class MasterViewController: UITableViewController {
         //  表示する行のラベルに、配列の値を設定する
         var myStr = objects[indexPath.row] as String
         cell.textLabel.text = myStr
+        //println(indexPath.row);
         return cell
     }
 /*

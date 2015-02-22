@@ -22,9 +22,20 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        println("detail=\(self.detailItem)")
+        // println("detail=\(self.detailItem)")
+        // println(self.detailItem);
+        // println(self.detailDescriptionLabel);
+        
         if let detail: AnyObject = self.detailItem {
             if let label = self.detailDescriptionLabel {
+                
+                if(detail.description == "オークス") {
+                    //println("オークス押された");
+                }
+                else {
+                    //println("それ以外");
+                }
+                
                 label.text = detail.description
             }
         }

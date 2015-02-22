@@ -2,8 +2,8 @@
 //  MasterViewController.swift
 //  MasterDetailAppTest
 //
-//  Created by 森 巧尚 on 2014/09/22.
-//  Copyright (c) 2014年 myname. All rights reserved.
+//  Created by Yutaro  on 2015/02/22.
+//  Copyright (c) 2015年 Yutaro Obayashi. All rights reserved.
 //
 
 import UIKit

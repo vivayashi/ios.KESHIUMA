@@ -30,13 +30,14 @@ class DetailViewController: UIViewController {
             if let label = self.detailDescriptionLabel {
                 
                 if(detail.description == "オークス") {
-                    //println("オークス押された");
+                    println("オークス押された");
                 }
                 else {
-                    //println("それ以外");
+                    println("それ以外");
                 }
                 
                 label.text = detail.description
+                self.title =  detail.description + "の消し馬情報";
             }
         }
     }

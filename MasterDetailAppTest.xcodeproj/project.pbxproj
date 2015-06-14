@@ -15,6 +15,7 @@
 		A90EC7B819D0645E00EE4F21 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A90EC7B619D0645E00EE4F21 /* LaunchScreen.xib */; };
 		A90EC7C419D0645E00EE4F21 /* MasterDetailAppTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90EC7C319D0645E00EE4F21 /* MasterDetailAppTestTests.swift */; };
 		DB3514551A9A23EF007CE51B /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3514541A9A23EF007CE51B /* testViewController.swift */; };
+		DB6A94841AFA6969003F38A1 /* horse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB6A94831AFA6969003F38A1 /* horse.jpg */; };
 		DBAC7CCD1AFA0057007DCC77 /* Grade2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC7CCC1AFA0057007DCC77 /* Grade2ViewController.swift */; };
 		DBAC7CCF1AFA104B007DCC77 /* Grade3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC7CCE1AFA104B007DCC77 /* Grade3ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		A90EC7C219D0645E00EE4F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A90EC7C319D0645E00EE4F21 /* MasterDetailAppTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDetailAppTestTests.swift; sourceTree = "<group>"; };
 		DB3514541A9A23EF007CE51B /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = testViewController.swift; path = ../testViewController.swift; sourceTree = "<group>"; };
+		DB6A94831AFA6969003F38A1 /* horse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = horse.jpg; sourceTree = "<group>"; };
 		DBAC7CCC1AFA0057007DCC77 /* Grade2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade2ViewController.swift; sourceTree = "<group>"; };
 		DBAC7CCE1AFA104B007DCC77 /* Grade3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,9 +89,9 @@
 			children = (
 				DB3514541A9A23EF007CE51B /* testViewController.swift */,
 				A90EC7AB19D0645E00EE4F21 /* AppDelegate.swift */,
+				A90EC7AD19D0645E00EE4F21 /* MasterViewController.swift */,
 				DBAC7CCC1AFA0057007DCC77 /* Grade2ViewController.swift */,
 				DBAC7CCE1AFA104B007DCC77 /* Grade3ViewController.swift */,
-				A90EC7AD19D0645E00EE4F21 /* MasterViewController.swift */,
 				A90EC7AF19D0645E00EE4F21 /* DetailViewController.swift */,
 				A90EC7B119D0645E00EE4F21 /* Main.storyboard */,
 				A90EC7B419D0645E00EE4F21 /* Images.xcassets */,
@@ -119,6 +121,7 @@
 		A90EC7C119D0645E00EE4F21 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DB6A94831AFA6969003F38A1 /* horse.jpg */,
 				A90EC7C219D0645E00EE4F21 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A90EC7B319D0645E00EE4F21 /* Main.storyboard in Resources */,
+				DB6A94841AFA6969003F38A1 /* horse.jpg in Resources */,
 				A90EC7B819D0645E00EE4F21 /* LaunchScreen.xib in Resources */,
 				A90EC7B519D0645E00EE4F21 /* Images.xcassets in Resources */,
 			);

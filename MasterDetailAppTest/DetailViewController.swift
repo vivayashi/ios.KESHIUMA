@@ -11,41 +11,65 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    @IBOutlet weak var scrollview: UIScrollView!
 
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
-            self.configureView()
+            //self.configureView()
         }
     }
+    
+    var grade: String = "";
+    var indexRow: Int = 0;
 
     func configureView() {
-        // Update the user interface for the detail item.
-        // println("detail=\(self.detailItem)")
-        // println(self.detailItem);
-        // println(self.detailDescriptionLabel);
         
-        if let detail: AnyObject = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                
-                if(detail.description == "オークス") {
-                    println("オークス押された");
-                }
-                else {
-                    println("それ以外");
-                }
-                
-                label.text = detail.description
-                self.title =  detail.description + "の消し馬情報";
-            }
+        println("タップされたグレード: \(self.grade)");
+        println("タップされたレース: \(self.detailItem as! String)")
+        println("タップされた行数: \(self.indexRow)");
+        /*
+        if((self.detailItem as! String) == "高松宮記念") {
+            println("高松宮記念押された");
+        }
+        */
+        
+    }
+    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
+    func setBackgroundColor(){
+        switch(self.grade) {
+        case "grade_1":
+            self.view.backgroundColor = UIColorFromRGB(0xddffff);
+            break;
+            
+        case "grade_2":
+            self.view.backgroundColor = UIColorFromRGB(0xffddff);
+            break;
+            
+        case "grade_3":
+            self.view.backgroundColor = UIColorFromRGB(0xffffdd);
+            break;
+        default:
+            break;
+            
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollview.contentSize.height = 2000;
         // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
+        self.setBackgroundColor();
+        self.configureView();
     }
 
     override func didReceiveMemoryWarning() {

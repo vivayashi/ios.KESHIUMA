@@ -47,42 +47,27 @@ class MasterViewController: UITableViewController {
             "朝日杯フューチュリティS",
             "有馬記念",
         ]
-/*
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
-*/
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-/*
-    func insertNewObject(sender: AnyObject) {
-        objects.insertObject(NSDate.date(), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-    }
-*/
-    // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             // 配列の選択した行を調べてその値を受け渡す
             if let indexPath = self.tableView.indexPathForSelectedRow() {
-                println(indexPath.row); // テーブルの行が返る
+                //println(indexPath.row); // テーブルの行が返る
                 let object = objects[indexPath.row] as! String
                 let controller = segue.destinationViewController as! DetailViewController
-                controller.detailItem = object
+                controller.detailItem = object; //これをDetailViewControllerに渡したい
+                controller.grade = "grade_1";
+                controller.indexRow = indexPath.row;
                 
             }
         }
     }
-
-    // MARK: - Table View
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -99,21 +84,6 @@ class MasterViewController: UITableViewController {
         //println(indexPath.row);
         return cell
     }
-/*
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            objects.removeObjectAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
-    }
-*/
 
 }
 

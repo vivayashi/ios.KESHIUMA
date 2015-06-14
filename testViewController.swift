@@ -10,9 +10,14 @@ import UIKit
 
 class testViewController: UIViewController {
 
+    @IBOutlet weak var myImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        myImageView.image = UIImage(named: "horse.jpg")
+        //self.view.addSubview(myImageView)
+        myImageView.alpha = 0.2;
+        self.view.sendSubviewToBack(myImageView)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -20,7 +25,6 @@ class testViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

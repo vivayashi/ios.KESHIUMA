@@ -12,7 +12,11 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     @IBOutlet weak var scrollview: UIScrollView!
-
+    @IBOutlet weak var info_Track: UILabel!
+    @IBOutlet weak var info_Popularity: UILabel!
+    @IBOutlet weak var info_Blood: UILabel!
+    @IBOutlet weak var info_PreRunning: UILabel!
+    
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
@@ -28,6 +32,11 @@ class DetailViewController: UIViewController {
         println("タップされたグレード: \(self.grade)");
         println("タップされたレース: \(self.detailItem as! String)")
         println("タップされた行数: \(self.indexRow)");
+        self.info_Track.text = self.detailItem as! String + "の枠情報";
+        self.info_Popularity.text = self.detailItem as! String + "の人気情報";
+        self.info_Blood.text = self.detailItem as! String + "の血統情報";
+        self.info_PreRunning.text = self.detailItem as! String + "の前走情報";
+
         /*
         if((self.detailItem as! String) == "高松宮記念") {
             println("高松宮記念押された");
